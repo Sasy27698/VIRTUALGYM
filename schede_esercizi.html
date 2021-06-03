@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+    <link href="scheda_esercizi.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCHEDE ESERCIZI</title>
+</head>
+<body>
+<div class='header'>
+<div style="position: absolute; top: 15; left: 835;">
+<img src="logo_virtualgym.png" class='logo'>
+</div></div>
+<hr></hr>
+<p> <ul>
+  <li><a  href="1 pagina.html"><h1>HOME</h1></a></li>
+  <li><a href="orari.html"><h1>ORARI</h1></a></li>
+  <li><a href=""><h1>CONTATTI</h1></a></li>
+  <li><a href=""><h1>ABOUT US</h1></a></li>
+</ul> </p>
+<hr></hr>
+<p><h1>Questa è la sezione "schede esercizi", in questa sezione le schede si divideranno in varie categorie, prima di scaricarle si prega di controllare l'apposita sezione prima pero calcolati il tuo peso bmi  <a href="calcolo_peso.html">QUI</a></h1></p>
+<div>
+<div class="destra">
+<button type="button" class="collapsible">SCHEDE DONNA ALLENAMENTO LIBERO</button>
+<div class="content">
+  <a href="Scheda Allenamento - Aumento massa muscolare (donna sottopeso-sottopesograve).docx" >
+  <img src="word.png" alt="word" width="140" height="142" >
+  </a>
+  <a href="Scheda Allenamento - Crescita musculare (donna normale).docx" >
+  <img src="word.png" alt="word1" width="140" height="142">
+  </a>
+<a href="Scheda Allenamento - Rassodamento muscolare (donna obeso).docx" >
+  <img src="word.png" alt="word2" width="140" height="142">
+</a>
+</div>
+<br>
+<button type="button" class="collapsible">SCHEDE DONNA ALLENAMENTO CON ATTREZZI</button>
+<div class="content">
+  <a href="" >
+  <img src="word.png" alt="word" width="140" height="142" >
+  </a>
+  <a href="" >
+  <img src="word.png" alt="word1" width="140" height="142">
+  </a>
+<a href="" >
+  <img src="word.png" alt="word2" width="140" height="142">
+</a>
+</div>
+</div>
+
+<div class="sinistra">
+<button type="button" class="collapsible">SCHEDE UOMO ALLENAMENTO LIBERO</button>
+<div class="content">
+<a href="Scheda Allenamento 1 (uomo).docx" >
+  <img src="word.png" alt="word3" width="140" height="142">
+</a>
+<a href="Scheda Allenamento 2 (uomo).docx" >
+  <img src="word.png" alt="word4" width="140" height="142">
+</a>
+<a href="Scheda Allenamento 3 (uomo).docx" >
+  <img src="word.png" alt="word5" width="140" height="142">
+</a>
+</div>
+<br>
+<button type="button" class="collapsible">SCHEDE UOMO ALLENAMENTO CON ATTREZZI</button>
+<div class="content">
+<a href="Scheda Allenamento 1 (uomo) attrezzi.docx" >
+  <img src="word.png" alt="word3" width="140" height="142">
+</a>
+<a href="Scheda Allenamento 2 (uomo) attrezzi.docx" >
+  <img src="word.png" alt="word4" width="140" height="142">
+</a>
+<a href="" >
+  <img src="word.png" alt="word5" width="140" height="142">
+</a>
+</div>
+</div>
+</div>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+</script>
+<footer>
+<small class='destra1' ><p align="center">Vincenzo Terraciano
+<br>
+Studente - Università degli Studi di Napoli Parthenope
+<br>
+Marticola: 0124001862
+<br>
+<a href= "mailto:vincenzo.terracciano003@studenti.uniparthenope.it">Contatto mail</a>
+<br>
+GitHub</p></small>
+<small style="position: absolute;left: 835;"><p align="center">Mario de Leo
+<br>
+Studente - Università degli Studi di Napoli Parthenope
+<br>
+Marticola: 0124001945
+<br>
+<a href= "mailto:mario.deleo001@studenti.uniparthenope.it">Contatto mail</a>
+<br>
+GitHub</p></small>
+<small class='sinistra1'><p align="center">Salvatore de Rosa
+<br>
+Studente - Università degli Studi di Napoli Parthenope
+<br>
+Marticola: 0124001981
+<br>
+<a href= "mailto:salvatore.derosa005@studenti.uniparthenope.it">Contatto mail</a>
+<br>
+GitHub</p></small>
+<br>
+<br>
+<br>
+<br>
+<br>
+<small style="position: absolute;left: 815;"><p align="center">COPYRIGHT, tutti i diritti riservati all’autore VIRTUALGYM©</p></small>
+</footer>
+</body>
+</html>
