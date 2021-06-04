@@ -1,20 +1,23 @@
 .login{
-	width:65px;
-	height:30px;
+	width:35%;
+	height:20%;
 	text-align: center;
 }
 .registrati{
-	width:70px;
-	height:30px;
+	width:35%;
+	height:20%;
 	text-align: center;
 }
 .destra{
 	float:right;
-	margin-right: 12px;
+	margin-right: 1%;
 }
 .sinistra{
 	float:left;
-	margin-left: 12px;
+	margin-left: 1%;
+}
+.img-container-block {
+	text-align: center;
 }
 .header {
 	width: 100%;
@@ -22,22 +25,12 @@
 	display: block;
 	background-color: #22a31c;
 }
-.centro{
-	float=center;
-}
+
 footer{
 	width: 100%;
-	height: 120px;
+	height: 10%;
 	display: block;
 	background-color: #22a31c;
-}
-.destra1{
-	 float:right;
-	 margin-right: 13px;
-}
-.sinistra1{
-	 float:left;
-	 margin-left: 13px;
 }
 ul {
   list-style-type: none;

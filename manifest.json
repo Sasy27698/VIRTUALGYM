@@ -1,8 +1,8 @@
 {
-  "name": "Hello World",
+  "name": "Virtual Gym",
 
 
-  "short_name": "Hello",
+  "short_name": "VG",
 
 
   "lang": "en-US",
@@ -11,7 +11,7 @@
   "start_url": "1 pagina.html",
 
 
-  "display": "standalone",
+  "display": "fullscreen",
 
 
   "background_color": "white",
