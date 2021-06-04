@@ -1,0 +1,31 @@
+{
+  "name": "Hello World",
+
+
+  "short_name": "Hello",
+
+
+  "lang": "en-US",
+
+
+  "start_url": "1 pagina.html",
+
+
+  "display": "standalone",
+
+
+  "background_color": "white",
+
+
+  "theme_color": "white",
+
+
+"icons": [
+{
+  "src": "logo1.png",
+  "sizes": "144x144",
+  "type": "image/png",
+  "purpose": "any"
+}
+]}
+
