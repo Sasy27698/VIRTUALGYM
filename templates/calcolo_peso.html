@@ -1,0 +1,148 @@
+<html lang="en">
+<head>
+    <title>CALCOLO PESO IBM</title>
+	<link href="calcolo_peso.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+	$(function () {
+	var form = $("form");
+
+	form.on("submit", function (event) {
+		event.preventDefault();
+		var risultato = $(".result .title");
+
+		function calc_BMI() {
+			var peso = $("#peso").val();
+			var altezza = $("#altezza").val();
+			var bmi = peso / (altezza * altezza);
+			return bmi.toFixed(2);
+		}
+
+		function stato_bmi() {
+			if (calc_BMI() < 15) {
+				return "Sottopeso molto grave";
+			}
+			if (calc_BMI() > 15 && calc_BMI() < 16) {
+				return "Sottopeso grave";
+			}
+			if (calc_BMI() > 16 && calc_BMI() < 18.5 ) {
+				return "Sottopeso";
+			}
+			if (calc_BMI() > 18.5 && calc_BMI() < 25) {
+				return "Normale";
+			}
+			if (calc_BMI() > 25 && calc_BMI() < 30) {
+				return "Sovrappeso";
+			}
+			if (calc_BMI() > 30 && calc_BMI() < 35) {
+				return "Obeso";
+			}
+			if (calc_BMI() > 35) {
+				return "Sovrapesso grave";
+			}
+		}
+
+		risultato.html(calc_BMI() + " -> " + stato_bmi());
+	});
+});
+</script>
+</head>
+<body>
+<div class='header'>
+    <div class="img-container-block" >
+        <img src="logo_virtualgym.png" alt="logo">
+    </div></div>
+<hr></hr>
+<p> <ul>
+  <li><a  href="homepage.html"><h1>HOME</h1></a></li>
+  <li><a href="orari.html"><h1>ORARI</h1></a></li>
+  <li><a href="aboutus.html"><h1>ABOUT US</h1></a></li>
+</ul> </p>
+<hr></hr>
+<h4>CALCOLA IL TUO BMI</h4>
+
+<form class="box">
+		<div class="field">
+		<label for="" class="label">
+			Peso:
+		</label>
+		<input id="peso" class="input" type="text">
+	</div>
+	
+	<div class="field">
+		<label class="label">
+			Altezza:
+		</label>
+		<input id="altezza" class="input" type="text">
+	</div>
+		<input class="button is-link is-outlined" type="submit" value="calculate">
+	</form>
+	<div class="result">
+		<h2 class="title"</h2>
+	</div>
+<table>
+  <tr>
+    <th>Categoria</th>
+    <th colspan="2">BMI</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td>da</td>
+    <td>a</td>
+  </tr>
+  <tr>
+    <td>Sottopeso molto grave</td>
+    <td><15</td>
+    <td>15</td>
+  </tr>
+  <tr>
+    <td>Sottopeso grave</td>
+    <td>15</td>
+    <td>16</td>
+  </tr>
+  <tr>
+    <td>Sottopeso</td>
+    <td>16</td>
+    <td>18,5</td>
+  </tr>
+  <tr>
+    <td>Normale</td>
+    <td>18,5</td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td>Sovrappeso</td>
+    <td>25</td>
+    <td>30</td>
+  </tr>
+  <tr>
+  <td>Obeso</td>
+  <td>30</td>
+  <td>35</td>
+  </tr>
+  <tr>
+  <td>Sovrappeso</td>
+  <td>35</td>
+  <td>≥35</td>
+  </tr>
+  </table>
+  <p>Sottopeso: il sottopeso può avere cause fisiche o psicologiche. La ghiandola tiroidea può funzionare troppo velocemente, quindi si consuma troppa energia. Se si mangia abbastanza e si ha ancora un sottopeso è consigliabile recarsi dal medico per un esame. Le cause psicologiche del sottopeso sono più comuni nelle giovani donne. Questo ha a che fare con l'ideale imposto dai media. Devi essere magra e potere indossare abiti di taglie piccole. Questo può portare all'anoressia. Anche se soffri di problematiche di natura psicologica è importante rivolgersi a un professionista.</p>
+  <p>Peso normale: Un peso normale è naturalmente la cosa migliore che si possa avere. L'IMC può variare da 18,5 a 25. Se hai un buon peso è importante mantenerlo. Inoltre, essere soddisfatti della propria linea è un aspetto puramente personale. Attraverso lo sport si può acquisire una linea più slanciata. Tieni d'occhio le tue abitudini alimentari e continua a muoverti a sufficienza. Puoi calcolare il tuo IMC tutte le volte che vuoi verificare se il tuo peso è adeguato.</p>
+  <p>Sovrappeso: Essere in sovrappeso significa avere un peso eccessivo. È importante che si inizi a perdere peso facendo più esercizio fisico. Questo non è sempre facile e speriamo che, con l'aiuto di consigli e suggerimenti, riuscirai a passare all'azione. L'obesità grave porta a rischi per la salute. Naturalmente ci sono anche conseguenze psicologiche. Ci si può sentire inutili ed essere afflitti da depressione, rendendoci ancora più inclini a mangiare. In caso di obesità grave è importante perdere peso il più presto possibile. Una buona dieta abbinata a una maggiore attività fisica è di grande importanza.</p>
+<footer>
+    <small><p style="text-align:center;">
+        COPYRIGHT © mario de leo vincenzo terracciano salvatore de rosa
+    </p>
+        <br>
+        <p style="text-align:center;">
+            studenti dell'università parthenope
+        </p>
+    </small>
+</footer>
+</body>
+</html>

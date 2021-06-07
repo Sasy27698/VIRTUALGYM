@@ -2,7 +2,7 @@ let cacheName = 'pwa01';
 
 let filesToCache = [
 
-    '1 pagina.html', /*
+    'homepage.html', /*
 
     'stile1pagina.css',
 

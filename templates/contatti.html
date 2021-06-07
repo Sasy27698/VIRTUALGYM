@@ -1,0 +1,42 @@
+<html>
+   <head>
+   <title>Contatti</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+   </head>
+   <body>
+            <div id = "map" style = "width: 900px; height: 580px"></div>
+			<script>
+			// Opzioni per la mappa (serve per prendere le coordinate del centro direzionale, zoom serve per zoommare la mappa)
+         var mapOptions = {
+            center: [40.8568666, 14.2843392],
+            zoom: 70
+         }
+         
+         // Creazione di un oggetto mappa
+         var map = new L.map('map', mapOptions);
+         
+         // Creazione di un oggetto layer (sito di default per le mappe)
+         var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+         
+         // Aggiungo il layer alla mappa
+         map.addLayer(layer);
+		          // Creo un marker per identificare la sede Marker
+         var markerOptions = {
+            title: "Sede del Centro Direzionale (isola C4)",
+            clickable: true,
+            draggable: true
+         }
+		          // Creating un altro marker con le coordinate della nostra sede
+         var marker = L.marker([40.8568666, 14.2843392]);
+         marker.bindPopup('Questa è la nostra sede! La sede del Centro Direzionale (isola C4)').openPopup();
+         // Infine aggiungo il marker alla nostra mappa!
+         marker.addTo(map);
+		 </script>
+   </body>
+</html>
