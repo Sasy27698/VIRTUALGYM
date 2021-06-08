@@ -7,10 +7,9 @@
 </head>
 <body> 
 <div class='header'>
-<div style="position: absolute; top: 15; left: 835;">
-<img src="logo_virtualgym.png" class='logo'>
-</div>
-</div>
+    <div class="img-container-block" >
+        <img src="logo_virtualgym.png" alt="logo">
+    </div></div>
 <hr>
 </hr>
 <p> <ul>
@@ -20,38 +19,255 @@
 </ul> </p>
 <hr>
 </hr>
-<div style="text-align:center"> 
-  <button onclick="playPause()">Play/Pause</button> 
-  <button onclick="makeBig()">Big</button>
+<div style align="center">
+    <div>
+    <button onclick="makeBig()">Big</button>
   <button onclick="makeSmall()">Small</button>
   <button onclick="makeNormal()">Normal</button>
-  <br>
-  <video id="video1" width="420">
-    <source src="Bad tapis roulant.mp4" type="video/mp4">
+        <br>
+  <video id="video1" width="420" controls>
+    <source src="Banded%20Shoulder%20Flexion%20(mutato)%5B3%5D.mp4" type="video/mp4">
     Your browser does not support HTML video.
   </video>
+        <br>
+    <button onclick="makeBig1()">Big</button>
+  <button onclick="makeSmall1()">Small</button>
+  <button onclick="makeNormal1()">Normal</button>
+        <br>
+  <video id="video2" width="420" controls>
+    <source src="Banded%20Uppercuts%20(mutato)%5B2%5D.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+        <br>
+    <button onclick="makeBig2()">Big</button>
+  <button onclick="makeSmall2()">Small</button>
+  <button onclick="makeNormal2()">Normal</button>
+        <br>
+    <video id="video3" width="420" controls>
+    <source src="Dumbbell_Foam_Roller_Bench_Press_(mutato)%5B2%5D.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+        <br>
+         <button onclick="makeBig3()">Big</button>
+  <button onclick="makeSmall3()">Small</button>
+  <button onclick="makeNormal3()">Normal</button>
+        <br>
+    <video id="video4" width="420" controls>
+    <source src="Dumbbell%20Power%20Row%20(mutato)%5B2%5D.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+        <br>
+         <button onclick="makeBig4()">Big</button>
+  <button onclick="makeSmall4()">Small</button>
+  <button onclick="makeNormal4()">Normal</button>
+        <br>
+    <video id="video5" width="420" controls>
+    <source src="Dumbbell%20RDL%20Lunge%20(mutato)%5B2%5D.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+         <br>
+         <button onclick="makeBig5()">Big</button>
+  <button onclick="makeSmall5()">Small</button>
+  <button onclick="makeNormal5()">Normal</button>
+        <br>
+    <video id="video6" width="420" controls>
+    <source src="Dumbbell%20Single%20Arm%20Clean%20and%20Jerk%20(mutato)%5B3%5D.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+         <br>
+         <button onclick="makeBig6()">Big</button>
+  <button onclick="makeSmall6()">Small</button>
+  <button onclick="makeNormal6()">Normal</button>
+        <br>
+    <video id="video7" width="420" controls>
+    <source src="Dumbbell%20Squat%20Press%20(mutato)%5B2%5D.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+         <br>
+         <button onclick="makeBig7()">Big</button>
+  <button onclick="makeSmall7()">Small</button>
+  <button onclick="makeNormal7()">Normal</button>
+        <br>
+    <video id="video8" width="420" controls>
+    <source src="Incline%20Dumbbell%20fly%20(mutato)%5B2%5D.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+         <br>
+         <button onclick="makeBig8()">Big</button>
+  <button onclick="makeSmall8()">Small</button>
+  <button onclick="makeNormal8()">Normal</button>
+        <br>
+    <video id="video9" width="420" controls>
+    <source src="Overhead%20Wide%20Dumbbell%20Press%20(mutato)%5B2%5D.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+         <br>
+         <button onclick="makeBig9()">Big</button>
+  <button onclick="makeSmall9()">Small</button>
+  <button onclick="makeNormal9()">Normal</button>
+        <br>
+    <video id="video10" width="420" controls>
+    <source src="TRX%20Bicep%20Curls%20(mutato)%5B2%5D.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+         <br>
+         <button onclick="makeBig10()">Big</button>
+  <button onclick="makeSmall10()">Small</button>
+  <button onclick="makeNormal10()">Normal</button>
+        <br>
+    <video id="video11" width="420" controls>
+    <source src="TRX%20Plank%20(mutato)%5B2%5D.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+        </div>
+
 </div> 
 <script> 
-var myVideo = document.getElementById("video1"); 
+var myVideo = document.getElementById("video1");
 
-function playPause() { 
-  if (myVideo.paused) 
-    myVideo.play(); 
-  else 
-    myVideo.pause(); 
-} 
+function makeBig() {
+    myVideo.width = 560;
+}
 
-function makeBig() { 
-    myVideo.width = 560; 
-} 
+function makeSmall() {
+    myVideo.width = 320;
+}
 
-function makeSmall() { 
-    myVideo.width = 320; 
-} 
+function makeNormal() {
+    myVideo.width = 420;
+}
+var myVideo1 = document.getElementById("video2");
 
-function makeNormal() { 
-    myVideo.width = 420; 
-} 
+function makeBig1() {
+    myVideo1.width = 560;
+}
+
+function makeSmall1() {
+    myVideo1.width = 320;
+}
+
+function makeNormal1() {
+    myVideo1.width = 420;
+}
+var myVideo2 = document.getElementById("video3");
+
+function makeBig2() {
+    myVideo2.width = 560;
+}
+
+function makeSmall2() {
+    myVideo2.width = 320;
+}
+
+function makeNormal2() {
+    myVideo2.width = 420;
+}
+var myVideo3 = document.getElementById("video4");
+
+function makeBig3() {
+    myVideo3.width = 560;
+}
+
+function makeSmall3() {
+    myVideo3.width = 320;
+}
+
+function makeNormal3() {
+    myVideo3.width = 420;
+}
+var myVideo4 = document.getElementById("video5");
+
+function makeBig4() {
+    myVideo4.width = 560;
+}
+
+function makeSmall4() {
+    myVideo4.width = 320;
+}
+
+function makeNormal4() {
+    myVideo4.width = 420;
+}
+var myVideo5 = document.getElementById("video6");
+
+function makeBig5() {
+    myVideo5.width = 560;
+}
+
+function makeSmall5() {
+    myVideo5.width = 320;
+}
+
+function makeNormal5() {
+    myVideo5.width = 420;
+}
+var myVideo6 = document.getElementById("video7");
+
+function makeBig6() {
+    myVideo6.width = 560;
+}
+
+function makeSmall6() {
+    myVideo6.width = 320;
+}
+
+function makeNormal6() {
+    myVideo6.width = 420;
+}
+var myVideo7 = document.getElementById("video8");
+
+function makeBig7() {
+    myVideo7.width = 560;
+}
+
+function makeSmall7() {
+    myVideo7.width = 320;
+}
+
+function makeNormal7() {
+    myVideo7.width = 420;
+}
+var myVideo8 = document.getElementById("video9");
+
+function makeBig8() {
+    myVideo8.width = 560;
+}
+
+function makeSmall8() {
+    myVideo8.width = 320;
+}
+
+function makeNormal8() {
+    myVideo8.width = 420;
+}
+var myVideo9 = document.getElementById("video10");
+
+function makeBig9() {
+    myVideo9.width = 560;
+}
+
+function makeSmall9() {
+    myVideo9.width = 320;
+}
+
+function makeNormal9() {
+    myVideo9.width = 420;
+}
+var myVideo10 = document.getElementById("video11");
+
+function makeBig10() {
+    myVideo10.width = 560;
+}
+
+function makeSmall10() {
+    myVideo10.width = 320;
+}
+
+function makeNormal10() {
+    myVideo10.width = 420;
+}
+
+
 </script> 
 </body>
 </html>
