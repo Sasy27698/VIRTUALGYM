@@ -1,8 +1,8 @@
-let cacheName = 'pwa01';
+let cacheName = 'virtualgym';
 
 let filesToCache = [
 
-    /*'templates/homepage.html',
+    /*'templates/homepage.html'
 
     'stile1pagina.css',
 
