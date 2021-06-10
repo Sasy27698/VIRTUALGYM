@@ -7,8 +7,9 @@
 
   "lang": "en-US",
 
+  "scope": "/",
 
-  "start_url": "homepage.html",
+  "start_url": "/",
 
 
   "display": "fullscreen",
@@ -22,7 +23,7 @@
 
 "icons": [
 {
-  "src": "logo1.png",
+  "src": "image/logo_virtualgym.png",
   "sizes": "144x144",
   "type": "image/png",
   "purpose": "any"

@@ -83,5 +83,10 @@ def login():
             return render_template("login.html", succ=0)
 
 
+@app.route('/sw.js')
+def sw():
+    return app.send_static_file("sw.js")
+
+
 if __name__ == '__main__':
     app.run()
