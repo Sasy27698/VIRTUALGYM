@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
     <title>CALCOLO PESO IBM</title>
-	<link href="calcolo_peso.css" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" href="../static/calcolo_peso.css">
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -43,7 +43,7 @@
 				return "Obeso";
 			}
 			if (calc_BMI() > 35) {
-				return "Sovrapesso grave";
+				return "Sovrapesso grave"
 			}
 		}
 
@@ -55,16 +55,16 @@
 <body>
 <div class='header'>
     <div class="img-container-block" >
-        <img src="logo_virtualgym.png" alt="logo">
+        <img src="../static/image/logo_virtualgym.png" alt="logo">
     </div></div>
-<hr></hr>
+<hr>
 <p> <ul>
-  <li><a  href="homepage.html"><h1>HOME</h1></a></li>
-  <li><a href="orari.html"><h1>ORARI</h1></a></li>
-  <li><a href="aboutus.html"><h1>ABOUT US</h1></a></li>
+  <li><a  href="/"><h1>HOME</h1></a></li>
+  <li><a href="/orari"><h1>ORARI</h1></a></li>
+  <li><a href="/aboutus"><h1>ABOUT US</h1></a></li>
 </ul> </p>
-<hr></hr>
-<h4>CALCOLA IL TUO BMI</h4>
+<hr>
+<strong><h1>Calcolo BMI</h1></strong>
 
 <form class="box">
 		<div class="field">
@@ -80,10 +80,10 @@
 		</label>
 		<input id="altezza" class="input" type="text">
 	</div>
-		<input class="button is-link is-outlined" type="submit" value="calculate">
+		<input class="button is-link is-outlined" type="submit" value="Calcola">
 	</form>
 	<div class="result">
-		<h2 class="title"</h2>
+		<h2 class="title"></h2>
 	</div>
 <table>
   <tr>

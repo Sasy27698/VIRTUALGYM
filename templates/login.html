@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
 <title>LOG IN</title>
-	<link href="login.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="../static/login.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<form action="action_page.php">
+<form action="/login" method="POST">
 <div class="container">
+	{% if succ == 0 %}<p> Password non corretta</p>{% endif %}
 <h1>Accesso</h1>
 <hr>
 <label for="email"><b>Email</b>
