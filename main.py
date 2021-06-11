@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request
 from pymongo import MongoClient
 
 
@@ -52,12 +52,19 @@ def registrazione():
     else:
         email = request.form["email"]
         password = request.form["psw"]
+        query = {"email": email}
+        result = utenti.find(query).count()
+    if result:
+        return "Quest'email è gia presa"
+    else:
+        ultimo_id = utenti.find().count()
         acc = {
+            "_id": ultimo_id + 1,
             "email": email,
             "password": password
         }
         utenti.insert_one(acc)
-        return redirect(url_for("homepage.html"))
+        return render_template("homepage.html")
 
 
 @app.route('/login', methods=['POST', 'GET'])
@@ -70,15 +77,15 @@ def login():
 
         utente = utenti.find_one({"email": email})
         if utente is None:
-            print("asgarra")
+            print("utente non trovato")
             return render_template("login.html", succ=0)
 
         if password == utente["password"]:
-            print("ok")
+            print("Password esatta")
             return render_template("homepage.html", succ=1)
 
         else:
-            print("NO OK")
+            print("Password sbagliata")
             return render_template("login.html", succ=0)
 
 

@@ -60,14 +60,7 @@ footer{
 	display: block;
 	background-color: #22a31c;
 }
-.destra1{
-	 float:right;
-	 margin-right: 13px;
-}
-.sinistra1{
-	 float:left;
-	 margin-left: 13px;
-}
+
 .img-container-block {
     text-align: center;
 }
@@ -79,5 +72,8 @@ footer{
     border-width: 1px;
     background-color: #98ff98;
     margin-left: 25%;
+    text-align: center;
+}
+.title2{
     text-align: center;
 }

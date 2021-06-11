@@ -16,6 +16,7 @@
 	form.on("submit", function (event) {
 		event.preventDefault();
 		var risultato = $(".result .title");
+		var risultato2 = $(".title2")
 
 		function calc_BMI() {
 			var peso = $("#peso").val();
@@ -47,8 +48,30 @@
 				return "Sovrapesso grave";
 			}
 		}
+		function consigli(){
+		    if(calc_BMI() < 18.4){
+		        return "La mattina appena svegliati, una colazione abbondante e' cio' che ci vuole per iniziare alla grande la giornata,\n" +
+                    "cercate di farla con fette biscottate e marmellata oppure passate ad un semplice yogurt alla frutta.\n" +
+                    "Cercate di mangiare regolarmente 3 volte al giorno e aumentate le porzioni di cibo ogni giorno.\n" +
+                    "Riducete gli allenamenti di resistenza e aumentate quelli di forza";
+            }
+		    if(calc_BMI() > 18.5 && calc_BMI() < 25){
+		        return "Avete un ottimo stile ed equilibrio di vita, avete dato al vostro corpo molte accortenze\n" +
+                    "grazie al vostro stile di vita sano ed equilibrato l'unico consiglio che posso darvi e' mettere su massa muscolare\n" +
+                    "facendo attivita' fisica e continuate a nutrirvi come avete sempre fatto, continuate cosi' e non perdete mai la via";
+            }
+		    if(calc_BMI() > 25){
+		        return "C'e' poco da dire in questa situazione, la parola d'ordine e' MUOVERSI e sopprattuto fare molti esercizi fisici.\n" +
+                    "Se siete in questa situazione non vi preoccupate c'e' sempre un rimedio, fate sempre la mattina una buona colazione\n" +
+                    "e 3 pasti al giorno, evitate cibo spazzatura come patatine fritte, contengono molto grasso e olio e non fanno bene alla salute.\n" +
+                    "Non fate troppi spuntini e sopprattuto evitate gli spuntini dolci e bevande gassatte che contengono grosse quantita di zuccheri.\n" +
+                    "Mangiate del pesce almeno due volte a settimana a pranzo e prova a mangiare più carne bianca come quella di tacchino, pollame\n" +
+                    "e meno carne rossa come quella di maiale o bovini, una buona scelta e' anche il cibo vegetariano";
+            }
+        }
 
 		risultato.html(calc_BMI() + " -> " + stato_bmi());
+		risultato2.html(consigli());
 	});
 });
 </script>
@@ -87,6 +110,9 @@
 	<div class="result">
 		<h2 class="title"></h2>
 	</div>
+    <div>
+        <h2 class="title2"></h2>
+    </div>
 </div>
 <br><br>
 <center>
@@ -136,6 +162,7 @@
   <td>≥35</td>
   </tr>
   </table>
+    <br>
     </center>
   <p>Sottopeso: il sottopeso può avere cause fisiche o psicologiche. La ghiandola tiroidea può funzionare troppo velocemente, quindi si consuma troppa energia. Se si mangia abbastanza e si ha ancora un sottopeso è consigliabile recarsi dal medico per un esame. Le cause psicologiche del sottopeso sono più comuni nelle giovani donne. Questo ha a che fare con l'ideale imposto dai media. Devi essere magra e potere indossare abiti di taglie piccole. Questo può portare all'anoressia. Anche se soffri di problematiche di natura psicologica è importante rivolgersi a un professionista.</p>
   <p>Peso normale: Un peso normale è naturalmente la cosa migliore che si possa avere. L'IMC può variare da 18,5 a 25. Se hai un buon peso è importante mantenerlo. Inoltre, essere soddisfatti della propria linea è un aspetto puramente personale. Attraverso lo sport si può acquisire una linea più slanciata. Tieni d'occhio le tue abitudini alimentari e continua a muoverti a sufficienza. Puoi calcolare il tuo IMC tutte le volte che vuoi verificare se il tuo peso è adeguato.</p>
