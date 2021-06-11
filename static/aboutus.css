@@ -40,10 +40,6 @@ html {
   display: table;
 }
 
-.title {
-  color: grey;
-}
-
 ul {
   list-style-type: none;
   margin: 0;

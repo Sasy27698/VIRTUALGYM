@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, send_file
+from flask import Flask, render_template, request, redirect, url_for
 from pymongo import MongoClient
 
 
@@ -50,7 +50,6 @@ def registrazione():
     if request.method == "GET":
         return render_template("registrazione_utente.html")
     else:
-
         email = request.form["email"]
         password = request.form["psw"]
         acc = {
@@ -58,7 +57,7 @@ def registrazione():
             "password": password
         }
         utenti.insert_one(acc)
-        return redirect(url_for("homepage"))
+        return redirect(url_for("homepage.html"))
 
 
 @app.route('/login', methods=['POST', 'GET'])
